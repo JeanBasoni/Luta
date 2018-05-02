@@ -1,31 +1,102 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<!-- #region Jssor Slider Begin -->
+<!-- Generator: Jssor Slider Maker -->
+<!-- Source: https://www.jssor.com -->
+<link rel="stylesheet" href="~/Content/slide/slide.css">
+<script type="text/javascript" src="~/Content/slide/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="~/Content/slide/jssor.slider.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+        var jssor_1_options = {
+            $AutoPlay: 1,
+            $Idle: 2000,
+            $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+            },
+            $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+            }
+        };
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+        /*#region responsive code begin*/
+
+        var MAX_WIDTH = $(window).width();
+
+        function ScaleSlider() {
+            var containerElement = jssor_1_slider.$Elmt.parentNode;
+            var containerWidth = containerElement.clientWidth;
+
+            if (containerWidth) {
+
+                var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                jssor_1_slider.$ScaleWidth(expectedWidth);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 30);
+            }
+        }
+
+        ScaleSlider();
+
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        /*#endregion responsive code end*/
+    });
+</script>
+<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+    <!-- Loading Screen -->
+    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+        <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/imagem/spin.svg" />
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+        <div data-p="170.00">
+            <img data-u="image" src="~/Content/imagem/001.jpg" />
+        </div>
+        <div>
+            <img data-u="image" src="~/Content/imagem/003.jpg" />
+        </div>
+        <div>
+            <img data-u="image" src="~/Content/imagem/004.jpg" />
+        </div>
+        <div>
+            <img data-u="image" src="~/Content/imagem/005.jpg" />
+        </div>
+        <div>
+            <img data-u="image" src="~/Content/imagem/006.jpg" />
+        </div>
+        <div style="background-color:#ff7c28;">
+            <div style="position:absolute;top:50px;left:50px;width:450px;height:62px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:left;padding:5px;box-sizing:border-box;">
+                Photos in this slider are to demostrate jssor slider,<br />
+                which are not licensed for any other purpose.
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <!-- Bullet Navigator -->
+    <div data-u="navigator" class="jssorb052" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+        <div data-u="prototype" class="i" style="width:16px;height:16px;">
+            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+            </svg>
+        </div>
+    </div>
+    <!-- Arrow Navigator -->
+    <div data-u="arrowleft" class="jssora053" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+        <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+        </svg>
+    </div>
+
+    <div data-u="arrowright" class="jssora053" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+        <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+        </svg>
     </div>
 </div>
+<!-- #endregion Jssor Slider End -->
