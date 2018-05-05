@@ -1,14 +1,15 @@
 ﻿.navbar-inverse {
-    background-color: rgba(7, 13, 16, 0.95);
-    border-bottom: 3px solid #ab0000;
+    /*background-color: rgba(7, 13, 16, 0.95);*/
+    background-color: rgba(32,61,76,.95);
+    border-bottom: 3px solid #db333f;
 }
 
-.content-wrapper, .right-side, .main-footer{
-    margin-left:0;
+.content-wrapper, .right-side, .main-footer {
+    margin-left: 0;
 }
 
-#navbar ul li:hover{
-    background-color: #ab0000;
+#navbar ul li:hover {
+    background-color: #db333f;
 }
 
 #navbar ul li {
@@ -23,6 +24,233 @@
     /* ...and now for the proper property */
     transition: .5s;
 }
+
 .header-gap {
     margin-top: 100px;
+}
+
+.evento-item {
+    /* position: relative; */
+    border: 2px solid #e6e6e6;
+    /* margin-bottom: 20px; */
+    float: left;
+    color: #666666;
+    width: 100%;
+    font-size: 13px;
+    /* line-height: 1.6em; */
+}
+
+.evento-info {
+    position: absolute;
+    bottom: 5px;
+}
+
+.evento-item .evento-info {
+    position: absolute;
+    bottom: 5px;
+}
+
+.evento-item h5 {
+    font-size: 15px;
+    padding-right: 4px;
+    line-height: 1.3em;
+}
+
+.evento-item .fa {
+    width: 20px;
+}
+
+.evento-item .col-xs-4 {
+    padding: 0 !important;
+    padding-bottom: 0;
+    margin-right: 10px;
+}
+
+@media (min-width: 991px) {
+    .evento-item .tag-modalidade, .evento-item .tag-curso, .evento-item .tag-confronto, .evento-item .tag-mma {
+        bottom: 0;
+        right: auto;
+        left: 0 !important;
+    }
+
+    .modo-lista .evento-item .tag-modalidade, .modo-lista .evento-item .tag-curso, .modo-lista .evento-item .tag-confronto, .modo-lista .evento-item .tag-mma {
+        bottom: 0;
+        right: 0 !important;
+        left: auto !important;
+    }
+}
+
+@media(min-width: 1460px) {
+    .container {
+        width: 1380px;
+    }
+}
+
+@media(min-width: 1530px) {
+    .container {
+        width: 1490px;
+    }
+}
+
+@media(min-width: 2020px) {
+    .container {
+        width: 1590px;
+    }
+}
+
+@media (max-width: 767px) {
+    .evento-item .col-xs-3 {
+        width: 35%;
+    }
+
+    .evento-item h5 {
+        font-size: 16px;
+    }
+
+    .evento-item .tag-modalidade, .evento-item .tag-curso, .evento-item .tag-confronto, .evento-item .tag-mma {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .evento-item .col-xs-3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .evento-item .evento-info .fa {
+        margin-left: 10px;
+    }
+
+    .evento-acoes ul li {
+        font-size: 11px !important;
+        padding: 3px 0px 8px 3px;
+    }
+
+    .evento-item h5 {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .evento-item .evento-info {
+        margin-top: 20px;
+        position: relative;
+    }
+
+        .evento-item .evento-info .fa {
+            margin-left: 10px;
+        }
+
+        .evento-item .evento-info p {
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+}
+
+@media (max-width: 320px) {
+    .evento-item h5 {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .evento-item .col-xs-5 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .evento-item .col-xs-3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .evento-item .evento-info {
+        margin-top: 20px;
+        position: relative;
+    }
+
+        .evento-item .evento-info .fa {
+            margin-left: 10px;
+        }
+
+        .evento-item .evento-info p {
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+}
+
+.evento-item .col-xs-3 {
+    padding: 0 !important;
+    padding-bottom: 0;
+    margin-right: 10px;
+}
+
+.itemFiltro {
+    margin-bottom: 20px;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 0;
+    background-color: #1a1a1a;
+    color: #cfcfcf;
+}
+
+    .footer h3 {
+        color: #db333f;
+    }
+
+    .footer ul {
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+
+        .footer ul a {
+            color: #cfcfcf;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            /* ...and now for the proper property */
+            transition: .5s;
+        }
+
+            .footer ul a:hover {
+                color: #db333f;
+            }
+
+.widget-user-2 .widget-user-username {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.widget-user-2 .widget-user-header {
+    padding: 10px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.blocoResult {
+    /*border:2px solid #666666;*/
+    padding: 10px 0 !important;
+}
+
+.blocoResult-2 {
+    border: 2px solid #666666;
+    padding: 10px 0px !important;
+}
+
+.tituloBlocoResult {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.filtro .box{
+    border:none;
 }

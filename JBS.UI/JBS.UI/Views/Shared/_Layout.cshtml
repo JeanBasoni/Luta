@@ -20,6 +20,8 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="~/Content/admin/dist/css/skins/_all-skins.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="~/Content/Site.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -49,7 +51,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="http://www.google.com.br">
-                        <img src="~/Content/imagem/db1d4abf09f2318ec50ada42c86d1e17_2.png" style="max-width:100%; height:auto;"/>
+                        <img src="~/Content/imagem/db1d4abf09f2318ec50ada42c86d1e17_2.png" style="max-width:100%; height:auto;" />
                     </a>
 
                 </div>
@@ -71,12 +73,57 @@
             @RenderBody()
             <hr />
         </div>
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 2.3.0
+
+        @*<footer class="main-footer">
+                    <div class="pull-right hidden-xs">
+                        <b>Version</b> 2.3.0
+                    </div>
+                    <strong>Copyright &copy; 2018-@DateTime.Now.Year <a href="http://almsaeedstudio.com">Jean Basoni</a>.</strong> Todos os direitos reservados.
+            </footer>*@
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3>Sobre o Site</h3>
+                        <p>O SITE é um Portal de Serviços Online destinados à Organizadores de Eventos de qualquer Esporte de Lutas. Saiba mais nossos serviços.</p>
+                        <p>Estamos situados na Av. Presidente Vargas, nº 123, Centro. Rio de JAneiro/RJ, Brasil.</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <h3>Navegação</h3>
+                        <ul>
+                            <a href="http://www.ilutas.com.br/sobre/#depoimentos" target="_self"><li>Depoimentos</li></a>
+                            <a href="http://www.ilutas.com.br/Eventos" target="_self"><li>Nossos Eventos: <br> - Campeonatos<br> - Cursos/Palestras <br> - Workshops/Seminários <br> -MMA <br> -Confrontos/Desafios</li></a>
+                            <a href="http://www.ilutas.com.br/Pessoa/Identifique-se.php" target="_self"><li>Cadastre-se</li></a>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h3>Suporte</h3>
+                        <ul>
+                            <a href="http://www.ilutas.com.br/contato" target="_self"><li>Contato</li></a>
+                            <a xhref="http://www.ilutas.com.br/faq" target="_self"><li>Perguntas frequentes (FAQ)</li></a>
+                            <a xhref="http://www.ilutas.com.br/faq" target="_self"><li>2ª Via do Boleto</li></a>
+                            <a xhref="http://www.ilutas.com.br/faq" target="_self"><li>Enviar Comprovante de Pagamento (Depósito e Transferência)</li></a>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Atendimento online</h3>
+                        <ul>
+                            Acesse no rodapé do site o nosso canal de atendimento online. Caso não visualize, envie-nos uma mensagem pelo fale conosco.
+                            <br>
+                            <u>Horário de Atendimento</u>:
+                            <br> Seg à Sex das 09 às 18h (dias úteis)
+                        </ul>
+                    </div>
+                    <div class="col-sm-2 pull-right text-right">
+                        <h3>Social link</h3>
+                        <a href="https://www.facebook.com/portalilutas/" target="_blank"><i class="fa fa-facebook hover-transition"></i></a>
+                        <a href="https://www.instagram.com/i_lutas/" target="_blank"><i class="fa fa-instagram hover-transition"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-google-plus hover-transition"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter fa-dark-green hover-transition"></i></a>
+                    </div>
+                </div>
             </div>
-            <strong>Copyright &copy; 2018-@DateTime.Now.Year <a href="http://almsaeedstudio.com">Jean Basoni</a>.</strong> Todos os direitos reservados.
-    </footer>
+        </footer>
     </div>
 
     @*@Scripts.Render("~/bundles/jquery")
