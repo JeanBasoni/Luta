@@ -20,8 +20,9 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="~/Content/admin/dist/css/skins/_all-skins.min.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <link rel="stylesheet" href="~/Content/Site.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -51,16 +52,17 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="http://www.google.com.br">
-                        <img src="~/Content/imagem/db1d4abf09f2318ec50ada42c86d1e17_2.png" style="max-width:100%; height:auto;" />
+                        @*<img src="~/Content/imagem/db1d4abf09f2318ec50ada42c86d1e17_2.png" style="max-width:100%; height:auto;" />*@
+                        <img src="http://www.ilutas.com.br/images/logo-ilutas-1.png">
                     </a>
 
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><b>Inicio</b></a></li>
-                        <li><a href="#">Sobre</a></li>
+                        <li><a href="~/Home/Index"><b>Inicio</b></a></li>
+                        <li><a href="~/Home/About">Sobre</a></li>
                         <li><a href="#">Eventos</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="~/Home/Contact">Contato</a></li>
                         <li class="dropdown">
                             <a href="#" class="login-button" role="button" aria-haspopup="true" aria-expanded="false">Login <i class="fa fa-user" style="margin-left: 5px;"></i></a>
                         </li>
@@ -71,15 +73,14 @@
         <div class="header-gap"></div>
         <div class="content-wrapper">
             @RenderBody()
-            <hr />
         </div>
 
         @*<footer class="main-footer">
-                    <div class="pull-right hidden-xs">
-                        <b>Version</b> 2.3.0
-                    </div>
-                    <strong>Copyright &copy; 2018-@DateTime.Now.Year <a href="http://almsaeedstudio.com">Jean Basoni</a>.</strong> Todos os direitos reservados.
-            </footer>*@
+                <div class="pull-right hidden-xs">
+                    <b>Version</b> 2.3.0
+                </div>
+                <strong>Copyright &copy; 2018-@DateTime.Now.Year <a href="http://almsaeedstudio.com">Jean Basoni</a>.</strong> Todos os direitos reservados.
+        </footer>*@
         <footer class="footer">
             <div class="container">
                 <div class="row">
@@ -124,6 +125,15 @@
                 </div>
             </div>
         </footer>
+
+        <div class="row-fluid footer-2" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"><img src="http://www.ilutas.com.br/images/logo-ilutas-2-footer.png"><p>2016, Portal iLUTAS –&nbsp;Todos os direitos reservados.</p></div>
+                    <div class="col-md-6 text-right hover-transition" style="margin-top: 15px;"><a href="/new/termos_de_uso.html" title="Termos de Uso">Termos de Uso</a> | <a href="/new/politica_de_privacidade.html" title="Política de Privacidade">Política de Privacidade</a></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     @*@Scripts.Render("~/bundles/jquery")

@@ -1,18 +1,18 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<!-- #region Jssor Slider Begin -->
-<!-- Generator: Jssor Slider Maker -->
-<!-- Source: https://www.jssor.com -->
-@*<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/solid.css" integrity="sha384-XmxkDmPXx/Hc19URgeNR9YRtH392uNsw0o7nb6dfZieETZuPI2mz5E41KhXKMqWQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/regular.css" integrity="sha384-A1EvA/hysGbYDv2FEiUKrI6X29Z6pC7/MUAyRiGH2TDHQxH/dYlPjAp9hckP+hpB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/brands.css" integrity="sha384-bPPSLwQBZnM19BXfTJMfRHEEG6hfLUvg62vkFjJLtwEkRntgEj7AWawlDsuCw0uq" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/fontawesome.css" integrity="sha384-JrS00hUlxRW4kN+mi4N+nYNvl2brci75f8X1VBQh/DbA/XIA2u8i3LLLxB68iE3R" crossorigin="anonymous">*@
 <link rel="stylesheet" href="~/Content/slide/slide.css">
-<script type="text/javascript" src="~/Content/slide/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="~/Content/slide/carousel.css" />
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">*@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+@*<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>*@
+@*<script type="text/javascript" src="~/Content/slide/jquery-1.9.1.min.js"></script>*@
+<script src="http://www.spturis.com/portal-novo/lib/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="~/Content/slide/jssor.slider.min.js"></script>
+<script type="text/javascript" src="~/Content/admin/bootstrap/js/jquery.carousel.js"></script>
+@*https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v2.5"*@
 <script type="text/javascript">
-    jQuery(document).ready(function ($) {
+    $(document).ready(function ($) {
 
         var jssor_1_options = {
             $AutoPlay: 1,
@@ -52,8 +52,36 @@
         $(window).bind("resize", ScaleSlider);
         $(window).bind("orientationchange", ScaleSlider);
         /*#endregion responsive code end*/
+
+        function mycarousel_initCallback(carousel) {
+            // Disable autoscrolling if the user clicks the prev or next button.
+            carousel.buttonNext.bind('click', function () {
+                carousel.startAuto(0);
+            });
+
+            carousel.buttonPrev.bind('click', function () {
+                carousel.startAuto(0);
+            });
+
+            // Pause autoscrolling if the user moves with the cursor over the clip.
+            carousel.clip.hover(function () {
+                carousel.stopAuto();
+            }, function () {
+                carousel.startAuto();
+            });
+        };
+
+        $("#mycarousel").jcarousel({
+            auto: 2,
+            wrap: 'last',
+            initCallback: mycarousel_initCallback
+        });
+
+
     });
 </script>
+
+
 <!-- <Slide> -->
 <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:300px;overflow:hidden;visibility:hidden;">
     <!-- Loading Screen -->
@@ -69,18 +97,6 @@
         </div>
         <div>
             <img data-u="image" src="~/Content/imagem/004.jpg" />
-        </div>
-        <div>
-            <img data-u="image" src="~/Content/imagem/005.jpg" />
-        </div>
-        <div>
-            <img data-u="image" src="~/Content/imagem/006.jpg" />
-        </div>
-        <div style="background-color:#ff7c28;">
-            <div style="position:absolute;top:50px;left:50px;width:450px;height:62px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:left;padding:5px;box-sizing:border-box;">
-                Photos in this slider are to demostrate jssor slider,<br />
-                which are not licensed for any other purpose.
-            </div>
         </div>
     </div>
     <!-- Bullet Navigator -->
@@ -108,6 +124,7 @@
 
 <div class="container" style="margin-top: 39px;">
     <div class="row">
+
         <div class="col-md-8">
             <div class="box box-info">
                 <div class="box-header with-border">
@@ -120,10 +137,10 @@
                             <div class="jplist-panel box panel-top">
                                 <div class="tabs-filtrar-eventos" style="margin-bottom: 10px;">
                                     <ul class="nav nav-tabs" role="tablist">
-                                        <li class="active"><a style="color:#666; font-weight:bold;" href="#tab-modalidade" aria-controls="modalidade" role="tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-trophy"></i> <span class="display-none-460">Tipo e Esporte</span></a></li>
+                                        <li class="active"><a style="color:#666; font-weight:bold;" href="#tab-modalidade" aria-controls="modalidade" role="tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-trophy"></i> <span class="display-none-460">Evento e Esporte</span></a></li>
                                         <li><a style="color:#666; font-weight:bold;" href="#tab-data" aria-controls="data" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i> <span class="display-none-520">Data</span></a></li>
                                         <li><a style="color:#666; font-weight:bold;" href="#tab-local" aria-controls="local" role="tab" data-toggle="tab"><i class="fa fa-map-marker"></i> <span class="display-none-520">Local</span></a></li>
-                                        <li><a style="color:#666; font-weight:bold;" href="#tab-pesquisar" aria-controls="pesquisar" role="tab" data-toggle="tab"><i class="fa fa-search"></i> <span class="display-none-520">Pesquisar</span></a></li>
+
                                         <button class="pull-right btn btn-primary glyphicon glyphicon-search" title="Filtrar"></button>
                                     </ul>
 
@@ -172,7 +189,7 @@
                                                         </select>
                                                         <script>
 
-                                                            $('#tipo-select').on('change', function () {
+                                                            $('#tipo-select').change(function () {
                                                                 if ($(this).val() === 'desativa-tipo') {
                                                                     $('#modalidade-select').attr('disabled', 'disabled');
                                                                     $("#modalidade-select").val("default");
@@ -292,31 +309,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="tab-pesquisar">
-                                            <div class="row form_padrao" style="margin: 5px -6px 0 -6px;">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red">Pesquisa por título</label>
-                                                        <!-- filter by title -->
-                                                        <!--[if lt IE 10]>
-                                                        <div class="jplist-label">Digite o nome do evento...</div>
-                                                        <![endif]-->
-                                                        <input class="form-control" data-path=".title" type="text" value="" placeholder="Digite o nome do evento..." data-control-type="textbox" data-control-name="title-filter" data-control-action="filter">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red">Pesquisa por local</label>
-                                                        <!-- filter by local -->
-                                                        <!--[if lt IE 10]>
-                                                        <div class="jplist-label">Digite o local do evento...</div>
-                                                        <![endif]-->
-                                                        <input class="form-control" data-path=".full-local" type="text" value="" placeholder="Digite o local do evento..." data-control-type="textbox" data-control-name="full-local-filter" data-control-action="filter">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
                                     <ul class="pull-right pagination pagination-sm"> <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li> <li><a href="#">1</a></li> <li><a href="#">2</a></li> <li><a href="#">3</a></li> <li><a href="#">4</a></li> <li><a href="#">5</a></li> <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li> </ul>
                                 </div>
@@ -768,16 +760,169 @@
         </div>
 
         <div class="col-md-4">
-            <div class="box box-warning">
+            <div class="box box-warning hidden">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Eventos/Lutas</h3>
+                    <h3 class="box-title">Ultimas notícias</h3>
                 </div><!-- /.box-header -->
-                <!-- form start -->
 
                 <div class="box-body">
+                    <div id="wrap">
+                        <ul id="mycarousel" class="jcarousel-skin-tango">
+                            <li>
+                                <div class="item active ">
+                                    <p><b>20/03/2018 16:05</b></p>
+                                    <h6></h6>
+                                    <p><b>Declaração de Participação</b><br>Informamos que a partir de agora o atleta, professor ou responsável pelas inscrições poderão emitir a declaração de participação nos campeonatos. Para tanto, acesse a conta e vá em Inscrições Realizadas.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item active ">
+                                    <p><b>20/03/2018 16:05</b></p>
+                                    <h6></h6>
+                                    <p><b>Declaração de Participação</b><br>Informamos que a partir de agora o atleta, professor ou responsável pelas inscrições poderão emitir a declaração de participação nos campeonatos. Para tanto, acesse a conta e vá em Inscrições Realizadas.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item active ">
+                                    <p><b>20/03/2018 16:05</b></p>
+                                    <h6></h6>
+                                    <p><b>Declaração de Participação</b><br>Informamos que a partir de agora o atleta, professor ou responsável pelas inscrições poderão emitir a declaração de participação nos campeonatos. Para tanto, acesse a conta e vá em Inscrições Realizadas.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
+                </div>
+            </div>
+
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Notícias do esporte</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <ul class="products-list product-list-in-box">
+                        <li class="item">
+                            <div class="product-img">
+                                <img src="~/Content/admin/dist/img/default-50x50.gif" alt="Product Image">
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:void(0)" class="product-title" title="UFC 224 - Nunes vs. Pennington">
+                                    UFC 224 - Nunes vs. Pennington
+                                </a>
+                                <span class="product-description" title="O Ultimate Fighting Championship estará oficialmente mudando para pelo menos uma nova plataforma a partir de 2019">
+                                    O Ultimate Fighting Championship estará oficialmente mudando para pelo menos uma nova plataforma a partir de 2019
+                                </span>
+                            </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                            <div class="product-img">
+                                <img src="~/Content/admin/dist/img/default-50x50.gif" alt="Product Image">
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:void(0)" class="product-title" title="A CONCLUSÃO: 'JACARE' NÃO APLICADO">
+                                    A CONCLUSÃO: "JACARE" NÃO APLICADO
+                                </a>
+                                <span class="product-description" title="A carreira de Ronaldo Souza foi definida de algumas maneiras pelas quais os lutadores que ele não lutou tanto quanto os lutadores que ele fez, escreve Todd Martin.">
+                                    A carreira de Ronaldo Souza foi definida de algumas maneiras pelas quais os lutadores que ele não lutou tanto quanto os lutadores que ele fez, escreve Todd Martin.
+                                </span>
+                            </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                            <div class="product-img">
+                                <img src="~/Content/admin/dist/img/default-50x50.gif" alt="Product Image">
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:void(0)" class="product-title" title="JON FITCH’S VOLTANDO">
+                                    JON FITCH’S VOLTANDO
+                                </a>
+                                <span class="product-description" title="O destaque de longa data do welterweight muda para um endereço Bellator MMA quando ele conhece Paul Daley no Bellator 199, no sábado, em San Jose, Califórnia.">
+                                    O destaque de longa data do welterweight muda para um endereço Bellator MMA quando ele conhece Paul Daley no Bellator 199, no sábado, em San Jose, Califórnia.
+                                </span>
+                            </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                            <div class="product-img">
+                                <img src="~/Content/admin/dist/img/default-50x50.gif" alt="Product Image">
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:void(0)" class="product-title" title="Video: UFC 224 'Embedded' Episode 1">
+                                    Video: UFC 224 'Embedded' Episode 1
+                                </a>
+                                <span class="product-description" title="No episódio 1 do UFC 224, “Embedded”, as estrelas do card se preparam para se aventurar na cidade-sede do evento, o Rio de Janeiro.">
+                                    No episódio 1 do UFC 224, “Embedded”, as estrelas do card se preparam para se aventurar na cidade-sede do evento, o Rio de Janeiro.
+                                </span>
+                            </div>
+                        </li>
+                        <!-- /.item -->
+                    </ul>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer text-center">
+                    <a href="javascript:void(0)" class="uppercase">ver mais</a>
+                </div>
+                <!-- /.box-footer -->
+            </div>
+
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Resultados</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-responsive table-hover">
+                        <tbody>
+                            <tr style="cursor: pointer;">
+                                <td>Jean Basoni</td>
+                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td>X</td>
+                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td>Fulano de tal</td>
+                            </tr>
+                            <tr style="cursor: pointer;">
+                                <td>Vanderlei Silva</td>
+                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td>X</td>
+                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td>Bob Sap</td>
+                            </tr>
+                            <tr style="cursor: pointer;">
+                                <td>Anderson Silva</td>
+                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td>X</td>
+                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td>Vitor Bellfort</td>
+                            </tr>
+                            <tr style="cursor: pointer;">
+                                <td>Minotauro</td>
+                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td>X</td>
+                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td>Fulano de tal</td>
+                            </tr>
+                            <tr style="cursor: pointer;">
+                                <td>Jean Basoni</td>
+                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td>X</td>
+                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td>Jon Jones</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer text-center">
+                    <a href="javascript:void(0)" class="uppercase">ver mais</a>
                 </div>
             </div>
 
@@ -787,7 +932,7 @@
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 <div class="box-body">
-
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FPageNoPainNoGainBrasil&tabs=timeline&width=340&height=131&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="131" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </div><!-- /.box-body -->
 
                 <div class="box-footer">
@@ -797,3 +942,94 @@
     </div>
 
 </div>
+
+<div class="box-gray-2">
+    <div class="container"><div class="row"><div class="arrow-up" style="float: left;"></div></div></div>
+    <div class="container p-maior">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="title-v1-vermelho">
+                    <h3>Somos os melhores</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp">
+                <h2 class="ilutas-red"><i class="fa fa-users"></i></h2>
+                <h1>+<span class="count">2800</span></h1>
+                <h6>
+                    <span class="p-apoio">equipes cadastradas</span><!--6-->
+                </h6>
+            </div>
+            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp">
+                <h2 class="ilutas-red"><i class="fa fa-eye"></i></h2>
+                <h1>+<span class="count">35000</span></h1>
+                <h6><span class="p-apoio">acessos mensais</span></h6>
+            </div>
+            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp">
+                <h2 class="ilutas-red"><i class="fa fa-pencil"></i></h2>
+                <h1>+<span class="count">82000</span></h1>
+                <h6><span class="p-apoio">atletas inscritos</span></h6>
+            </div>
+            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp full-visible">
+                <h2 class="ilutas-red"><i class="fa fa-map-marker"></i></h2>
+                <h1>+<span class="count">17</span></h1>
+                <h6><span class="p-apoio">estados presentes</span></h6>
+            </div>
+            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp full-visible">
+                <h2 class="ilutas-red"><i class="fa fa-rocket"></i></h2>
+                <h1>+<span class="count">100</span></h1>
+                <h6><span class="p-apoio">organizadores usaram</span></h6>
+            </div>
+            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp full-visible">
+                <h2 class="ilutas-red"><i class="fa fa-info"></i></h2>
+                <h1>+<span class="count">260</span></h1>
+                <h6><span class="p-apoio">eventos realizados</span></h6>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="http://www.ilutas.com.br/css/animate.css">
+<script src="~/Content/admin/dist/js/jquery.viewportchecker.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.post').addClass("hiddenn").viewportChecker({
+            classToAdd: 'visiblee animated fadeInUp', // Class to add to the elements when they are visible
+            offset: 100
+        });
+        $('.postFadeInLeft').addClass("hiddenn").viewportChecker({
+            classToAdd: 'visiblee animated fadeInLeft', // Class to add to the elements when they are visible
+            offset: 100
+        });
+        $('.postFadeInRight').addClass("hiddenn").viewportChecker({
+            classToAdd: 'visiblee animated fadeInRight', // Class to add to the elements when they are visible
+            offset: 100
+        });
+        $('.postbounceIn').addClass("hiddenn").viewportChecker({
+            classToAdd: 'visiblee animated bounceIn', // Class to add to the elements when they are visible
+            offset: 100
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("html, body").delay(2000).animate({ scrollTop: $('.box-gray-2').offset().top }, 2000);
+
+
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                    duration: 2500,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+        });
+
+    });
+</script>
