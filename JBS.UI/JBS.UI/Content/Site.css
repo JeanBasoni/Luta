@@ -1,4 +1,11 @@
-﻿.navbar-inverse {
+﻿p, h1, h2, h3, h4, h5, h6, span {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
+}
+a{
+    color: #db333f;
+}
+
+.navbar-inverse {
     /*background-color: rgba(7, 13, 16, 0.95);*/
     background-color: rgba(32,61,76,.95);
     border-bottom: 3px solid #db333f;
@@ -299,23 +306,23 @@ a:hover, a:active, a:focus {
     background: #000;
 }
 
-.footer-2 p {
-    font-weight: 600;
-    display: inline;
-    padding: 0 15px;
-    padding-top: 20px !important;
-    vertical-align: bottom;
-}
+    .footer-2 p {
+        font-weight: 600;
+        display: inline;
+        padding: 0 15px;
+        padding-top: 20px !important;
+        vertical-align: bottom;
+    }
 
-.footer-2 a:hover {
-    color: #fff;
-}
+    .footer-2 a:hover {
+        color: #fff;
+    }
 
-.footer-2 a {
-    color: #aaa;
-}
+    .footer-2 a {
+        color: #aaa;
+    }
 
-.navbar-brand img{
+.navbar-brand img {
     width: auto;
 }
 
@@ -481,6 +488,7 @@ a:hover, a:active, a:focus {
     margin-bottom: 30px;
     text-align: center;
 }
+
     .title-v1-vermelho h3 {
         text-transform: uppercase;
         position: relative;
@@ -488,7 +496,6 @@ a:hover, a:active, a:focus {
         padding-bottom: 15px;
         margin-top: 0;
         color: #dc333f;
-        
     }
 
 .ilutas-red, .ilutas-b-login-color {
@@ -503,9 +510,9 @@ h2, .h2 {
 }
 
 h3, .h3 {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-weight: 600;
-    font-style: italic;
+    /*font-style: italic;*/
     font-size: 24px;
 }
 
@@ -532,4 +539,8 @@ h1, .h1 {
     position: absolute;
     background: #dc333f;
     margin-left: -30px;
+}
+
+.tituloSobreP{
+    color: #fff;
 }

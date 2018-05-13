@@ -15,15 +15,35 @@ namespace JBS.UI.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page."; 
+            ViewBag.Message = "Sobre Nocaute COMBATE";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contatos";
 
+            return View();
+        }
+
+        public ActionResult Evento()
+        {
+            ViewBag.Message = "Eventos";
+
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            ViewBag.Message = "Login";
+
+            return View();
+        }
+
+        public ActionResult NovoUsuario()
+        {
+            ViewBag.Message = "Novo usuário";
             return View();
         }
     }

@@ -1,17 +1,117 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="container">
+    <div class="row">
+        <h3>
+            Entre em contato conosco para tirar todas as suas dúvidas!
+        </h3>
+        <hr style="border-top:1px solid #ab0000;" />
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="NM_PFALE" class="text-uppercase ilutas-red">Nome</label>
+                                <input class="form-control" id="NM_PFALE" name="NM_PFALE" type="text" placeholder="seu nome completo" data-bv-field="NM_PFALE"><i class="form-control-feedback" data-bv-icon-for="NM_PFALE" style="display: none;"></i>
+                                <small class="help-block" data-bv-validator="stringLength" data-bv-for="NM_PFALE" data-bv-result="NOT_VALIDATED" style="display: none;">Preencha este campo com no mínimo 8 caracteres</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="NM_PFALE" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha seu nome completo</small>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="DS_PEMA" class="text-uppercase ilutas-red">E-mail</label>
+                                <input class="form-control" id="DS_PEMA" name="DS_PEMA" type="text" placeholder="seu e-mail para contato" data-bv-field="DS_PEMA"><i class="form-control-feedback" data-bv-icon-for="DS_PEMA" style="display: none;"></i>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="DS_PEMA" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha seu email para contato</small><small class="help-block" data-bv-validator="emailAddress" data-bv-for="DS_PEMA" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha o campo com um email válido</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="DS_TEL" class="text-uppercase ilutas-red">Telefone (1)</label>
+                                <input class="form-control" id="DS_TEL" name="DS_TEL" type="text" placeholder="(99) 98765-4321" data-bv-field="DS_TEL"><i class="form-control-feedback" data-bv-icon-for="DS_TEL" style="display: none;"></i>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="DS_TEL" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha seu telefone principal</small><small class="help-block" data-bv-validator="phone" data-bv-for="DS_TEL" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha o campo com um número de telefone válido</small>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="DS_TEL2" class="text-uppercase ilutas-red">Telefone (2)</label>
+                                <input class="form-control" id="DS_TEL2" name="DS_TEL2" type="text" placeholder="(99) 98765-4321 opcional" data-bv-field="DS_TEL2"><i class="form-control-feedback" data-bv-icon-for="DS_TEL2" style="display: none;"></i>
+                                <small class="help-block" data-bv-validator="phone" data-bv-for="DS_TEL2" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha o campo com um número de telefone válido</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="DS_AFALE" class="text-uppercase ilutas-red">Assunto</label>
+                                <input class="form-control" id="DS_AFALE" name="DS_AFALE" type="text" placeholder="assunto da sua mensagem" data-bv-field="DS_AFALE"><i class="form-control-feedback" data-bv-icon-for="DS_AFALE" style="display: none;"></i>
+                                <small class="help-block" data-bv-validator="stringLength" data-bv-for="DS_AFALE" data-bv-result="NOT_VALIDATED" style="display: none;">Preencha este campo com no mínimo 8 caracteres</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="DS_AFALE" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, informe o assunto da sua mensagem</small>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="ID_NUM_AREA" class="text-uppercase ilutas-red">Setor</label>
+                                <select class="form-control" id="ID_NUM_AREA" name="ID_NUM_AREA" type="text" placeholder="selecione um setor" data-bv-field="ID_NUM_AREA">
+                                    <option value=" ">selecione um setor</option>
+                                    <option value="63">CAMPEONATOS</option>
+                                    <option value="61">COMERCIAL</option>
+                                    <option value="67">DÚVIDAS &amp; DIFICULDADES</option>
+                                    <option value="68">ELOGIOS</option>
+                                    <option value="12">PATROCÍNIO iLutas</option>
+                                    <option value="65">RECLAMAÇÕES</option>
+                                    <option value="62">RECURSOS HUMANOS</option>
+                                    <option value="66">SUGESTÕES</option>
+                                </select><i class="form-control-feedback" data-bv-icon-for="ID_NUM_AREA" style="display: none;"></i>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="ID_NUM_AREA" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, selecione um setor</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group has-feedback">
+                                <label for="DS_FALE" class="text-uppercase ilutas-red">Mensagem</label>
+                                <textarea class="form-control" name="DS_FALE" placeholder="sua mensagem" style="min-height: 160px;" data-bv-field="DS_FALE"></textarea><i class="form-control-feedback" data-bv-icon-for="DS_FALE" style="display: none;"></i>
+                                <small class="help-block" data-bv-validator="stringLength" data-bv-for="DS_FALE" data-bv-result="NOT_VALIDATED" style="display: none;">Sua mensagem deve conter ao menos 20 caracteres (e no máximo 1500)</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="DS_FALE" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha o campo com alguma mensagem</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- Success message -->
+                            <div class="alert alert-success hide" role="alert" id="success_message">Ótimo. <i class="glyphicon glyphicon-thumbs-up"></i> Obrigado por entrar em contato conosco. Responderemos sua mensagem o quanto antes.</div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary pull-right">enviar mensagem</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+        <div class="col-md-4">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Contatos</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <dl>
+                        <dt><i style="color:#ab0000;" class="fa fa-envelope"></i>&nbsp; Email</dt>
+                        <dd>teste@teste.com.br</dd>
+                        <br />
+                        <dt><i style="color:#ab0000;" class="fa fa-clock"></i>&nbsp; Atendimento</dt>
+                        <dd>De seg. à sex.: de 9h às 18h. (dias úteis)</dd>
+                        <dd></dd>
+                        <dd>Entre em contato conosco atravéz do formulário ao lado.</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

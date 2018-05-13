@@ -2,15 +2,20 @@
     ViewBag.Title = "Home Page";
 }
 <link rel="stylesheet" href="~/Content/slide/slide.css">
-<link rel="stylesheet" href="~/Content/slide/carousel.css" />
+@*<link rel="stylesheet" href="~/Content/slide/carousel.css" />*@
+@*<link rel="stylesheet" href="http://www.ilutas.com.br/css/animate.css">*@
 @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">*@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 @*<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>*@
 @*<script type="text/javascript" src="~/Content/slide/jquery-1.9.1.min.js"></script>*@
-<script src="http://www.spturis.com/portal-novo/lib/jquery-1.4.2.min.js"></script>
+@*<script src="http://www.spturis.com/portal-novo/lib/jquery-1.4.2.min.js"></script>*@
+<script src="http://www.ilutas.com.br/js/jquery-ui.js"></script>
+@*<script type='text/javascript' charset='utf-8' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>*@
 <script type="text/javascript" src="~/Content/slide/jssor.slider.min.js"></script>
-<script type="text/javascript" src="~/Content/admin/bootstrap/js/jquery.carousel.js"></script>
-@*https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v2.5"*@
+@*<script type="text/javascript" src="~/Content/admin/bootstrap/js/jquery.carousel.js"></script>*@
+@*<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0-rc.1/themes/base/jquery-ui.css">*@
+
+
 <script type="text/javascript">
     $(document).ready(function ($) {
 
@@ -53,29 +58,29 @@
         $(window).bind("orientationchange", ScaleSlider);
         /*#endregion responsive code end*/
 
-        function mycarousel_initCallback(carousel) {
-            // Disable autoscrolling if the user clicks the prev or next button.
-            carousel.buttonNext.bind('click', function () {
-                carousel.startAuto(0);
-            });
+        //function mycarousel_initCallback(carousel) {
+        //    // Disable autoscrolling if the user clicks the prev or next button.
+        //    carousel.buttonNext.bind('click', function () {
+        //        carousel.startAuto(0);
+        //    });
 
-            carousel.buttonPrev.bind('click', function () {
-                carousel.startAuto(0);
-            });
+        //    carousel.buttonPrev.bind('click', function () {
+        //        carousel.startAuto(0);
+        //    });
 
-            // Pause autoscrolling if the user moves with the cursor over the clip.
-            carousel.clip.hover(function () {
-                carousel.stopAuto();
-            }, function () {
-                carousel.startAuto();
-            });
-        };
+        //    // Pause autoscrolling if the user moves with the cursor over the clip.
+        //    carousel.clip.hover(function () {
+        //        carousel.stopAuto();
+        //    }, function () {
+        //        carousel.startAuto();
+        //    });
+        //};
 
-        $("#mycarousel").jcarousel({
-            auto: 2,
-            wrap: 'last',
-            initCallback: mycarousel_initCallback
-        });
+        //$("#mycarousel").jcarousel({
+        //    auto: 2,
+        //    wrap: 'last',
+        //    initCallback: mycarousel_initCallback
+        //});
 
 
     });
@@ -126,7 +131,7 @@
     <div class="row">
 
         <div class="col-md-8">
-            <div class="box box-info">
+            <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">Principais destaques</h3>
                 </div><!-- /.box-header -->
@@ -339,23 +344,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -383,23 +388,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -426,23 +431,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -469,23 +474,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -512,23 +517,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -555,23 +560,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -598,23 +603,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -641,23 +646,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -684,23 +689,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -727,23 +732,23 @@
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                         <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-text-o fa-lg"></i>
+                                            <i class="fa fa-file-alt fa-lg"></i>
                                         </a>
                                     </li>
-                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pencil-square-o fa-lg"></i> Insc.</li></a> --->
+                                    <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                         <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pencil-square-o fa-lg"></i>
+                                            <i class="fa fa-pen-square fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                            <i class="fa fa-money fa-lg"></i>
+                                            <i class="fa fa-money-bill-alt fa-lg"></i>
                                         </a>
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                            <i class="fa fa-cloud-upload fa-lg"></i>
+                                            <i class="fa fa-cloud-upload-alt fa-lg"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -760,7 +765,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="box box-warning hidden">
+            <div class="box box-primary hidden">
                 <div class="box-header with-border">
                     <h3 class="box-title">Ultimas notícias</h3>
                 </div><!-- /.box-header -->
@@ -885,37 +890,37 @@
                         <tbody>
                             <tr style="cursor: pointer;">
                                 <td>Jean Basoni</td>
-                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td><i class="fa fa-thumbs-up text-green"></i></td>
                                 <td>X</td>
-                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td><i class="fa fa-thumbs-down text-red"></i></td>
                                 <td>Fulano de tal</td>
                             </tr>
                             <tr style="cursor: pointer;">
                                 <td>Vanderlei Silva</td>
-                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td><i class="fa fa-thumbs-up text-green"></i></td>
                                 <td>X</td>
-                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td><i class="fa fa-thumbs-down text-red"></i></td>
                                 <td>Bob Sap</td>
                             </tr>
                             <tr style="cursor: pointer;">
                                 <td>Anderson Silva</td>
-                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td><i class="fa fa-thumbs-up text-green"></i></td>
                                 <td>X</td>
-                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td><i class="fa fa-thumbs-down text-red"></i></td>
                                 <td>Vitor Bellfort</td>
                             </tr>
                             <tr style="cursor: pointer;">
                                 <td>Minotauro</td>
-                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td><i class="fa fa-thumbs-up text-green"></i></td>
                                 <td>X</td>
-                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td><i class="fa fa-thumbs-down text-red"></i></td>
                                 <td>Fulano de tal</td>
                             </tr>
                             <tr style="cursor: pointer;">
                                 <td>Jean Basoni</td>
-                                <td><i class="fa fa-thumbs-o-up text-green"></i></td>
+                                <td><i class="fa fa-thumbs-up text-green"></i></td>
                                 <td>X</td>
-                                <td><i class="fa fa-thumbs-o-down text-red"></i></td>
+                                <td><i class="fa fa-thumbs-down text-red"></i></td>
                                 <td>Jon Jones</td>
                             </tr>
                         </tbody>
@@ -955,34 +960,34 @@
             </div>
         </div>
         <div class="row text-center">
-            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp">
+            <div class="col-sm-4 post">
                 <h2 class="ilutas-red"><i class="fa fa-users"></i></h2>
                 <h1>+<span class="count">2800</span></h1>
                 <h6>
                     <span class="p-apoio">equipes cadastradas</span><!--6-->
                 </h6>
             </div>
-            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp">
+            <div class="col-sm-4 post">
                 <h2 class="ilutas-red"><i class="fa fa-eye"></i></h2>
                 <h1>+<span class="count">35000</span></h1>
                 <h6><span class="p-apoio">acessos mensais</span></h6>
             </div>
-            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp">
+            <div class="col-sm-4 post">
                 <h2 class="ilutas-red"><i class="fa fa-pencil"></i></h2>
                 <h1>+<span class="count">82000</span></h1>
                 <h6><span class="p-apoio">atletas inscritos</span></h6>
             </div>
-            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp full-visible">
+            <div class="col-sm-4 post">
                 <h2 class="ilutas-red"><i class="fa fa-map-marker"></i></h2>
                 <h1>+<span class="count">17</span></h1>
                 <h6><span class="p-apoio">estados presentes</span></h6>
             </div>
-            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp full-visible">
+            <div class="col-sm-4 post">
                 <h2 class="ilutas-red"><i class="fa fa-rocket"></i></h2>
                 <h1>+<span class="count">100</span></h1>
                 <h6><span class="p-apoio">organizadores usaram</span></h6>
             </div>
-            <div class="col-sm-4 post hiddenn visiblee animated fadeInUp full-visible">
+            <div class="col-sm-4 post">
                 <h2 class="ilutas-red"><i class="fa fa-info"></i></h2>
                 <h1>+<span class="count">260</span></h1>
                 <h6><span class="p-apoio">eventos realizados</span></h6>
@@ -990,9 +995,9 @@
         </div>
     </div>
 </div>
-<link rel="stylesheet" href="http://www.ilutas.com.br/css/animate.css">
-<script src="~/Content/admin/dist/js/jquery.viewportchecker.js"></script>
 
+
+<script src="http://www.ilutas.com.br/js/jquery-viewport-checker.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.post').addClass("hiddenn").viewportChecker({
@@ -1016,9 +1021,6 @@
 
 <script>
     $(document).ready(function () {
-        $("html, body").delay(2000).animate({ scrollTop: $('.box-gray-2').offset().top }, 2000);
-
-
         $('.count').each(function () {
             $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()
