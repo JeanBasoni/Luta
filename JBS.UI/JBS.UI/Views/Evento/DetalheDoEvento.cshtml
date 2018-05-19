@@ -1,0 +1,294 @@
+﻿
+@{
+    ViewBag.Title = "Detalhes do evento";
+}
+
+<div class="row bg-dark text-white">
+    <div class="container">
+        <div class="col-md-9">
+            <h3>Campeonato de jiu-jitsu</h3>
+        </div>
+        <div class="col-md-3">
+            @Html.ActionLink("voltar para listagem de eventos", "Evento", "Evento", null, new { @class = "pull-right", @style = "margin-top:15px;" })
+        </div>
+    </div>
+</div>
+<div class="row bg-white">
+    <div class="container" style=" padding:10px;">
+        <div class="col-lg-4" style="overflow: hidden;">
+            <img src="~/Content/imagem/001.jpg" style="width: 100%;" />
+        </div>
+        <div class="col-md-8">
+            <h4 style="margin-bottom:0;">VII OPEN PARAÍBA DE JIU-JITSU</h4>
+            <p style="margin-bottom:0;">Periodo de 16/04/2018 à 23/05/2018</p>
+            <i class="fa fa-calendar"> 26 e 27 de maio de 2018 </i>
+            <i class="fa fa-map-marker fa-lg">João Pessoa/PB</i>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <a href="#" class="btn btn-default-red" role="button">
+                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="Fazer Inscrição Individual ou por Equipe no Evento">
+                    <i class="fa fa-pencil-alt fa-lg"></i>
+                </span>
+            </a>
+            <a href="#" class="btn btn-default-red" role="button">
+                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="Emitir a 2ª Via do Boleto para Pagamento">
+                    <i class="fa fa-barcode fa-lg"></i>
+                </span>
+            </a>
+            <a href="#" class="btn btn-default-red" role="button">
+                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="Acessar a Checagem (Pré - Todos Inscritos ou Oficial - Apenas os Efetivados) do Campeonato">
+                    <i class="fa fa-check-square fa-lg"></i>
+                </span>
+            </a>
+            <a href="#" class="btn btn-default-red" role="button">
+                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="Acessar a Chave do Campeonato">
+                    <i class="fa fa-sitemap fa-lg"></i>
+                </span>
+            </a>
+            <a href="#" class="btn btn-default-red" role="button">
+                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="Visualizar o Cronograma do Campeonato">
+                    <i class="fa fa-calendar-check fa-lg"></i>
+                </span>
+            </a>
+            <a href="#" class="btn btn-default-red" role="button">
+                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="Visualizar o Resultado do Campeonato">
+                    <i class="fa fa-trophy fa-lg"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row" style=" margin-top: 10px;">
+    <div class="container">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">Resumo</h4>
+                    </div>
+                    <div class="box-body">
+                        <div class="col-md-4">
+                            <h5 style="color:#dc333f; font-weight: 600;">
+                                DATA DO EVENTO
+                            </h5>
+                            <p>
+                                26 e 27 de maio de 2018
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 style="color:#dc333f; font-weight: 600;">
+                                PERÍODO DE INSCRIÇÃO
+                            </h5>
+                            <p>
+                                De 16/04/2018 à 23/05/2018
+                            </p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h5 style="color:#dc333f; font-weight: 600;">
+                                LIMITE PARA O PAGAMENTO
+                            </h5>
+                            <p>
+                                Até 23/05/2018
+                            </p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h5 style="color:#dc333f; font-weight: 600;">
+                                CHECAGEM
+                            </h5>
+                            <p>
+                                14/05 das 23:00h até 25/05 às 18:00h
+                            </p>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h5 style="color:#dc333f; font-weight: 600;">
+                                PUBLICAÇÃO DAS CHAVES
+                            </h5>
+                            <p>
+                                25/05 a partir das 19:00h
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 style="color:#dc333f; font-weight: 600;">
+                                CRONOGRAMA
+                            </h5>
+                            <p>
+                                A definir
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h4 class="box-title">Tudo sobre o evento</h4>
+                    </div>
+                    <div class="box-body detalhe-evento">
+                        <div class="col-xs-3 no-padding no-margin">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li role="presentation" class="active"><a class="no-padding-side" aria-controls="sobreoevento" role="tab" data-toggle="tab" href="#sobreoevento"><i class="fa fa-info-circle"></i><span class="display-none">Sobre</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" href="#local" aria-controls="local" role="tab" data-toggle="tab"><i class="fa fa-money-bill-alt"></i><span class="display-none">Local</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" href="#incPagamento" aria-controls="incPagamento" role="tab" data-toggle="tab"><i class="fa fa-money-bill-alt"></i><span class="display-none">Insc. e pag.</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" aria-controls="categoria" role="tab" data-toggle="tab" href="#categoria"><i class="fa fa-tags"></i><span class="display-none">Categoria</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" href="#absoluto" aria-controls="absoluto" role="tab" data-toggle="tab"><i class="fa fa-bookmark"></i><span class="display-none">Absoluto</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" href="#checagem" aria-controls="checagem" role="tab" data-toggle="tab"><i class="fa fa-check-square"></i><span class="display-none">Checagem</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" aria-controls="chaves" role="tab" data-toggle="tab" href="#chaves"><i class="fa fa-sitemap"></i><span class="display-none">Chaves</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" href="#pesagem" aria-controls="pesagem" role="tab" data-toggle="tab"><i class="fa fa-tachometer-alt"></i><span class="display-none">Pesagem</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" href="#regras" aria-controls="regras" role="tab" data-toggle="tab"><i class="fa fa-user-secret"></i><span class="display-none">Regras</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" aria-controls="premiacao" role="tab" data-toggle="tab" href="#premiacao"><i class="fa fa-trophy"></i><span class="display-none">Premiação</span></a></li>
+                                <li role="presentation"><a class="no-padding-side" href="#termos" aria-controls="termos" role="tab" data-toggle="tab"><i class="fa fa-file-alt"></i><span class="display-none">Termos</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xs-9">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="sobreoevento" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Sobre o evento</h6>
+                                        <p><span style="font-size:14px">todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="local" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Local do evento</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="incPagamento" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Inscrição e pagamento</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="categoria" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Categoria</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="absoluto" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Absoluto</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="checagem" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Checagem</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="chaves" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Chaves</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="pesagem" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Pesagem</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="regras" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Regras</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="premiacao" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Premiação</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane " id="termos" role="tabpanel">
+                                    <div class="img-bordered-sm" style="padding:8px;">
+                                        <h6 class="ilutas-red display-none">Termos</h6>
+                                        <p><span style="font-size:14px">Temos a honra de convidar todos os atletas para participarem d<strong>o 7 open Paraíba de jiu jitsu, </strong>tendo como o objetivo principal a confraternização do Jiu-Jitsu.</span></p>
+
+                                        <p><span style="font-size:14px">Este evento é aberto a todos os atletas de Jiu-Jitsu do estado e convidados de outros estados brasileiros.</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h4 class="box-title">Atletas inscritos</h4>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                <div class="box-body">
+                    <table class="table table-responsive table-hover">
+                        <tbody>
+                            <tr style="cursor: pointer;">
+                                <td>Jean Basoni</td>
+                            </tr>
+                            <tr style="cursor: pointer;">
+                                <td>Vanderlei Silva</td>
+                            </tr>
+                            <tr style="cursor: pointer;">
+                                <td>Anderson Silva</td>
+                            </tr>
+                            <tr style="cursor: pointer;">
+                                <td>Minotauro</td>
+                            </tr>
+                            <tr style="cursor: pointer;">
+                                <td>Jean Basoni</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+
+                <div class="box-footer text-center">
+                    <a href="javascript:void(0)" class="uppercase">ver mais</a>
+                </div>
+            </div>
+
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h4 class="box-title">Também no Facebook</h4>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                <div class="box-body">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FPageNoPainNoGainBrasil&tabs=timeline&width=340&height=131&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="131" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div><!-- /.box-body -->
+
+                <div class="box-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

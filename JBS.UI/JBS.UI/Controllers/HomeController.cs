@@ -13,7 +13,6 @@ namespace JBS.UI.Controllers
         {
             return View();
         }
-
         public ActionResult About()
         {
             ViewBag.Message = "Sobre Nocaute COMBATE";
@@ -24,13 +23,6 @@ namespace JBS.UI.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Contatos";
-
-            return View();
-        }
-
-        public ActionResult Evento()
-        {
-            ViewBag.Message = "Eventos";
 
             return View();
         }

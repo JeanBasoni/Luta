@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Nocaute COMBATE</title>
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -60,13 +60,13 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>@Html.ActionLink("Home", "Index")</li>
-                        <li>@Html.ActionLink("Sobre", "About")</li>
-                        <li>@Html.ActionLink("Eventos", "Evento")</li>
-                        <li>@Html.ActionLink("Contato", "Contact")</li>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Sobre", "About", "Home")</li>
+                        <li>@Html.ActionLink("Eventos", "Evento", "Evento")</li>
+                        <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
                         <li>@Html.ActionLink("ADMIN", "Index", "Home", new { area = "Admin" }, null)</li>
                         <li class="dropdown">
-                            <a href="#" class="login-button" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a href="~/Home/Login" class="login-button" role="button" aria-haspopup="true" aria-expanded="false">
                                 Login
                                 <i class="fa fa-user" style="margin-left: 5px;"></i>
                             </a>

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "ErrorMessage";
+}
+<br/>
+
+<div class="container">
+    <section class="content-header">
+        <h1>
+            &nbsp;
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#" style="text-decoration:underline;"><i class="fa fa-dashboard"></i> Voltar</a></li>
+        </ol>
+    </section>
+    <section class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4><i class="icon fa fa-ban"></i> Atenção! ocorreu o seguinte erro</h4>
+        @ViewBag.ErrorDescription
+    </section>
+</div>
