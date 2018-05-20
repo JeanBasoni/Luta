@@ -3,18 +3,26 @@
     ViewBag.Title = "Evento";
 }
 
+<div class="row bg-dark text-white">
+    <div class="container">
+        <div class="col-md-9">
+            <h3>Nossos eventos</h3>
+        </div>
+        @*<div class="col-md-3">
+            <a class="pull-right" href="/Evento/Evento" style="margin-top:11px;">voltar</a>
+            <i class="fa fa-chevron-left pull-right" style="margin-top:15px; margin-right:5px;"></i>
+        </div>*@
+    </div>
+</div>
 <div class="container">
-    <div class="row">
+    @*<div class="row">
         <h3>
             Nossos eventos
         </h3>
         <hr style="border-top:1px solid #ab0000;" />
-    </div>
+    </div>*@
     <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Principais destaques</h3>
-            </div><!-- /.box-header -->
+        <div class="box box-none">
             <!-- form start -->
             <div class="box-body">
                 <div class="filtro row">
@@ -91,8 +99,8 @@
                                                     <label class="text-uppercase ilutas-red">Pesquisa por título</label>
                                                     <!-- filter by title -->
                                                     <!--[if lt IE 10]>
-                                                    <div class="jplist-label">Digite o nome do evento...</div>
-                                                    <![endif]-->
+                                            <div class="jplist-label">Digite o nome do evento...</div>
+                                            <![endif]-->
                                                     <input class="form-control" data-path=".title" type="text" value="" placeholder="Digite o nome do evento..." data-control-type="textbox" data-control-name="title-filter" data-control-action="filter">
                                                 </div>
                                             </div>
@@ -187,8 +195,8 @@
                                                     <label class="text-uppercase ilutas-red">Pesquisa por local</label>
                                                     <!-- filter by local -->
                                                     <!--[if lt IE 10]>
-                                                    <div class="jplist-label">Digite o local do evento...</div>
-                                                    <![endif]-->
+                                            <div class="jplist-label">Digite o local do evento...</div>
+                                            <![endif]-->
                                                     <input class="form-control" data-path=".full-local" type="text" value="" placeholder="Digite o local do evento..." data-control-type="textbox" data-control-name="full-local-filter" data-control-action="filter">
                                                 </div>
                                             </div>
@@ -206,7 +214,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -215,32 +223,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -250,7 +258,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -259,32 +267,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -293,7 +301,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -302,32 +310,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -336,7 +344,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -345,32 +353,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -379,7 +387,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -388,32 +396,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -422,7 +430,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -431,32 +439,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -465,7 +473,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -474,32 +482,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -508,7 +516,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -517,32 +525,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -551,7 +559,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header " style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -560,32 +568,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -594,7 +602,7 @@
 
                     <div class="col-md-6">
                         <!-- Widget: user widget style 1 -->
-                        <div class="box box-widget widget-user-2 img-bordered-sm">
+                        <div class="box box-widget widget-user-2 box-bordered-sm">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header" style="cursor:pointer;">
                                 <div class="widget-user-image">
@@ -603,32 +611,32 @@
                                 <h3 class="widget-user-username" style="height:32px;">Campeonato Paraibano Kids de Jiu-Jitsu 2018</h3>
                                 <h5 class="widget-user-desc">
                                     <span class="date">
-                                        <i class="fa fa-calendar"></i> 06/05/2018
+                                        <i class="fa fa-calendar icon"></i> 06/05/2018
                                     </span>
-                                    <span class="full-local"><i class="fa fa-map-marker fa-lg"></i> João Pessoa/<span class="local l-PB">PB</span></span>
+                                    <span class="full-local"><i class="fa fa-map-marker fa-lg icon"></i> João Pessoa/<span class="local l-PB">PB</span></span>
                                 </h5>
                             </div>
                             <hr style="margin:0; padding-bottom:8px;" />
                             <ul class="list-inline" style="padding-left:10px; ">
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
                                     <a href="#" title="Ver Regulamento">
-                                        <i class="fa fa-file-alt fa-lg"></i>
+                                        <i class="fa fa-file-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
                                     <a href="#" #" title="Fazer Inscrição">
-                                        <i class="fa fa-pen-square fa-lg"></i>
+                                        <i class="fa fa-pen-square fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
-                                        <i class="fa fa-money-bill-alt fa-lg"></i>
+                                        <i class="fa fa-money-bill-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                                 <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Informar Pagamento">
                                     <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
-                                        <i class="fa fa-cloud-upload-alt fa-lg"></i>
+                                        <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                     </a>
                                 </li>
                             </ul>

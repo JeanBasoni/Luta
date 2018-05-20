@@ -1,9 +1,5 @@
 ﻿body {
-    font-family: Roboto, Helvetica, Arial, sans-serif !important;
-    font-size: 16px;
-    line-height: 1.5;
 }
-
 
 .h1, .h2, .h3, h1, h2, h3 {
     margin-top: 10px;
@@ -11,75 +7,25 @@
 }
 
 p, h1, h2, h3, h4, h5, h6, span {
-    /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;*/
-    font-family: Roboto, Helvetica, Arial, sans-serif !important;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
 }
 
-h3 {
-    /*color: #16294a;*/
-    color: rgba(32,61,76,.95);
-}
-
-span {
-    font-size: 12px;
-    font-weight: normal;
-    color: #999;
-}
-
-.bg-dark h1, h2, h3, h4, h5, h6 {
-    color: #d0d0d0 ;
-}
-
-.title{
-    color: rgba(32,61,76,.95) ;
-}
-
-label {
-    color: rgba(32,61,76,.95) !important;
-}
-
-.box-title {
-    color: rgb(26, 26, 26) !important;
-}
 .bg-dark {
-    /*background-color: #343a40 !important;*/
-    background-color:     rgba(32,61,76,.95) !important;
-}
-
-.box-none{
-    border-top: none;
+    background-color: #343a40 !important;
 }
 
 .text-white {
     color: #e6e6e6;
 }
 
-.box-bordered-sm {
-    border: 1px solid #d2d6de;
-    padding: 2px;
+a {
+    color: #db333f;
 }
-
-.navbar-default .navbar-nav > li > a {
-    color: #d0d0d0 !important;
-}
-
-.navbar-default .navbar-nav > li > a:hover{
-    color: #dcdcdc !important;
-}
-
-.icon {
-    color: #1c92ad;
-}
-.icon-abobora {
-    color: #f25f43;
-}
-
 
 .navbar-inverse {
     /*background-color: rgba(7, 13, 16, 0.95);*/
-    /*background-color: #1a1a1a;*/
-    background-color: rgba(26,26,26,0.9);
-    border-bottom: 3px solid #f25f43;
+    background-color: rgba(32,61,76,.95);
+    border-bottom: 3px solid #db333f;
 }
 
 .content-wrapper, .right-side, .main-footer {
@@ -87,7 +33,7 @@ label {
 }
 
 #navbar ul li:hover {
-    background-color: #f25f43;
+    background-color: #db333f;
 }
 
 #navbar ul li {
@@ -304,10 +250,6 @@ label {
     font-weight: 600;
 }
 
-.widget-user-username {
-    color: rgba(32,61,76,.95);
-}
-
 .widget-user-2 .widget-user-header {
     padding: 10px;
     border-top-right-radius: 3px;
@@ -415,8 +357,7 @@ a:hover, a:active, a:focus {
     }
 
     .navbar-inverse {
-        /*background-color: rgba(32,61,76,.98);*/
-        background-color: rgba(26,26,26,0.9);
+        background-color: rgba(32,61,76,.98);
     }
 
     .nav-bar-inverse .navbar-form .row {

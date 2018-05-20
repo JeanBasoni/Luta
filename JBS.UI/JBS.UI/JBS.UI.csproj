@@ -1051,6 +1051,8 @@
     <Content Include="Content\imagem\img_l_8.jpg" />
     <Content Include="Content\imagem\sobre-img-1.jpg" />
     <Content Include="Content\imagem\sobre-img-2.jpg" />
+    <Content Include="Content\Site1.css" />
+    <Content Include="Content\Site2.css" />
     <Content Include="Content\slide\next-horizontal.png" />
     <Content Include="Content\imagem\oval.svg" />
     <Content Include="Content\slide\prev-horizontal.png" />

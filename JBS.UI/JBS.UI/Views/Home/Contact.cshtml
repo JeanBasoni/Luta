@@ -1,28 +1,30 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
+
+<div class="row bg-dark text-white">
+    <div class="container">
+        <div class="col-md-9">
+            <h3>Entre em contato conosco para tirar todas as suas dúvidas!</h3>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
-        <h3>
-            Entre em contato conosco para tirar todas as suas dúvidas!
-        </h3>
-        <hr style="border-top:1px solid #ab0000;" />
-    </div>
-    <div class="row">
         <div class="col-md-8">
-            <div class="box box-primary">
+            <div class="box box-none">
                 <div class="box-body">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <label for="NM_PFALE" class="text-uppercase ilutas-red">Nome</label>
+                                <label>Nome</label>
                                 <input class="form-control" id="NM_PFALE" name="NM_PFALE" type="text" placeholder="seu nome completo" data-bv-field="NM_PFALE"><i class="form-control-feedback" data-bv-icon-for="NM_PFALE" style="display: none;"></i>
                                 <small class="help-block" data-bv-validator="stringLength" data-bv-for="NM_PFALE" data-bv-result="NOT_VALIDATED" style="display: none;">Preencha este campo com no mínimo 8 caracteres</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="NM_PFALE" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha seu nome completo</small>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <label for="DS_PEMA" class="text-uppercase ilutas-red">E-mail</label>
+                                <label>E-mail</label>
                                 <input class="form-control" id="DS_PEMA" name="DS_PEMA" type="text" placeholder="seu e-mail para contato" data-bv-field="DS_PEMA"><i class="form-control-feedback" data-bv-icon-for="DS_PEMA" style="display: none;"></i>
                                 <small class="help-block" data-bv-validator="notEmpty" data-bv-for="DS_PEMA" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha seu email para contato</small><small class="help-block" data-bv-validator="emailAddress" data-bv-for="DS_PEMA" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha o campo com um email válido</small>
                             </div>
@@ -31,14 +33,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <label for="DS_TEL" class="text-uppercase ilutas-red">Telefone (1)</label>
+                                <label>Telefone (1)</label>
                                 <input class="form-control" id="DS_TEL" name="DS_TEL" type="text" placeholder="(99) 98765-4321" data-bv-field="DS_TEL"><i class="form-control-feedback" data-bv-icon-for="DS_TEL" style="display: none;"></i>
                                 <small class="help-block" data-bv-validator="notEmpty" data-bv-for="DS_TEL" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha seu telefone principal</small><small class="help-block" data-bv-validator="phone" data-bv-for="DS_TEL" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha o campo com um número de telefone válido</small>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <label for="DS_TEL2" class="text-uppercase ilutas-red">Telefone (2)</label>
+                                <label>Telefone (2)</label>
                                 <input class="form-control" id="DS_TEL2" name="DS_TEL2" type="text" placeholder="(99) 98765-4321 opcional" data-bv-field="DS_TEL2"><i class="form-control-feedback" data-bv-icon-for="DS_TEL2" style="display: none;"></i>
                                 <small class="help-block" data-bv-validator="phone" data-bv-for="DS_TEL2" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha o campo com um número de telefone válido</small>
                             </div>
@@ -47,14 +49,14 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <label for="DS_AFALE" class="text-uppercase ilutas-red">Assunto</label>
+                                <label>Assunto</label>
                                 <input class="form-control" id="DS_AFALE" name="DS_AFALE" type="text" placeholder="assunto da sua mensagem" data-bv-field="DS_AFALE"><i class="form-control-feedback" data-bv-icon-for="DS_AFALE" style="display: none;"></i>
                                 <small class="help-block" data-bv-validator="stringLength" data-bv-for="DS_AFALE" data-bv-result="NOT_VALIDATED" style="display: none;">Preencha este campo com no mínimo 8 caracteres</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="DS_AFALE" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, informe o assunto da sua mensagem</small>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group has-feedback">
-                                <label for="ID_NUM_AREA" class="text-uppercase ilutas-red">Setor</label>
+                                <label>Setor</label>
                                 <select class="form-control" id="ID_NUM_AREA" name="ID_NUM_AREA" type="text" placeholder="selecione um setor" data-bv-field="ID_NUM_AREA">
                                     <option value=" ">selecione um setor</option>
                                     <option value="63">CAMPEONATOS</option>
@@ -73,7 +75,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group has-feedback">
-                                <label for="DS_FALE" class="text-uppercase ilutas-red">Mensagem</label>
+                                <label>Mensagem</label>
                                 <textarea class="form-control" name="DS_FALE" placeholder="sua mensagem" style="min-height: 160px;" data-bv-field="DS_FALE"></textarea><i class="form-control-feedback" data-bv-icon-for="DS_FALE" style="display: none;"></i>
                                 <small class="help-block" data-bv-validator="stringLength" data-bv-for="DS_FALE" data-bv-result="NOT_VALIDATED" style="display: none;">Sua mensagem deve conter ao menos 20 caracteres (e no máximo 1500)</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="DS_FALE" data-bv-result="NOT_VALIDATED" style="display: none;">Por favor, preencha o campo com alguma mensagem</small>
                             </div>
@@ -96,7 +98,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="box box-primary">
+            <div class="box box-none">
                 <div class="box-header with-border">
                     <h4 class="box-title">Contatos</h4>
                 </div><!-- /.box-header -->
