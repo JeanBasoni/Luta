@@ -155,7 +155,7 @@
                                             <div class="row form_padrao" style="margin: 5px -6px 0 -6px;">
                                                 <div class="col-sm-3">
                                                     <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red">Tipo de evento</label>
+                                                        <label class="text-uppercase s-red">Tipo de evento</label>
                                                         <!-- Select TIPO DE EVENTO DropDown Control -->
                                                         <select name="tipo-select" id="tipo-select" class="form-control selectpicker" data-control-type="filter-select" data-control-name="tipo-filter" data-control-action="filter">
                                                             <option xvalue="desativa-tipo" data-path="default">Todos</option>
@@ -171,7 +171,7 @@
                                                 </div>
                                                 <div class="col-sm-3">
                                                     <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red" data-toggle="tooltip" data-placement="top" data-original-title="" title="">Esporte</label>
+                                                        <label class="text-uppercase s-red" data-toggle="tooltip" data-placement="top" data-original-title="" title="">Esporte</label>
                                                         <!-- Select MODALIDADE DropDown Control -->
                                                         <select name="modalidade-select" id="modalidade-select" class="form-control" data-control-type="filter-select" data-control-name="modalidade-filter" data-control-action="filter">
                                                             <option value="default" data-path="default">Todas</option>
@@ -208,7 +208,7 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red">Pesquisa por título</label>
+                                                        <label class="text-uppercase s-red">Pesquisa por título</label>
                                                         <!-- filter by title -->
                                                         <!--[if lt IE 10]>
                                                         <div class="jplist-label">Digite o nome do evento...</div>
@@ -224,7 +224,7 @@
 
                                                 <div class="col-lg-3">
                                                     <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red">Período</label>
+                                                        <label class="text-uppercase s-red">Período</label>
                                                         <!-- Select TIPO DE EVENTO DropDown Control -->
                                                         <select name="periodo-select" id="periodo-select" class="form-control selectpicker" data-control-type="filter-select" data-control-name="periodo-filter" data-control-action="filter">
                                                             <option data-path="default">todos</option>
@@ -239,7 +239,7 @@
 
                                                 <div class="col-lg-9">
                                                     <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red">intervalo de datas</label>
+                                                        <label class="text-uppercase s-red">intervalo de datas</label>
                                                         <!-- date picker range filter -->
                                                         <div class="row">
 
@@ -267,7 +267,7 @@
                                             <div class="row form_padrao" style="margin: 5px -6px 0 -6px;">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red">Localidade (Estado)</label>
+                                                        <label class="text-uppercase s-red">Localidade (Estado)</label>
                                                         <!-- Select LOCAL (ESTADOS) DropDown Control -->
                                                         <select class="form-control" data-control-type="filter-select" data-control-name="local-filter" data-control-action="filter">
                                                             <option data-path="default">Local...</option>
@@ -304,7 +304,7 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="text-uppercase ilutas-red">Pesquisa por local</label>
+                                                        <label class="text-uppercase s-red">Pesquisa por local</label>
                                                         <!-- filter by local -->
                                                         <!--[if lt IE 10]>
                                                         <div class="jplist-label">Digite o local do evento...</div>
@@ -343,15 +343,17 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
+                                        @*<a href="#" title="Ver Regulamento">
+                <i class="fa fa-file-alt fa-lg icon-abobora"></i>
+            </a>*@
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @*<a href="#" #" title="Fazer Inscrição">
+                <i class="fa fa-pen-square fa-lg icon-abobora"></i>
+            </a>*@
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -362,6 +364,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -387,15 +392,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -406,6 +407,10 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -430,15 +435,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -449,6 +450,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -473,15 +477,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -492,6 +492,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -516,15 +519,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -535,6 +534,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -559,15 +561,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -578,6 +576,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -602,15 +603,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -621,6 +618,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -645,15 +645,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -664,6 +660,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -688,15 +687,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -707,6 +702,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -731,15 +729,11 @@
                                 <hr style="margin:0; padding-bottom:8px;" />
                                 <ul class="list-inline" style="padding-left:10px; ">
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Regulamento">
-                                        <a href="#" title="Ver Regulamento">
-                                            <i class="fa fa-file-alt fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "DetalheDoEvento", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-file-alt fa-lg icon-abobora", title = "Ver Regulamento" })
                                     </li>
                                     <!--- <a href="#" class="ls-modal" title="Fazer Inscri&atilde;�&atilde;�o" role="button"  data-toggle="modal" data-remote="login.php?Op=Inscricao&event=72650d9cf782fbd6c38ca84c168e9562" data-target="#myModalLogin" ><li data-toggle="tooltip" data-placement="bottom" title="Fazer Inscri&atilde;�&atilde;�o"><i class="fa fa-pen-square fa-lg"></i> Insc.</li></a> --->
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Fazer Inscrição">
-                                        <a href="#" #" title="Fazer Inscrição">
-                                            <i class="fa fa-pen-square fa-lg icon-abobora"></i>
-                                        </a>
+                                        @Html.ActionLink(" ", "Login", "Home", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-pen-square fa-lg icon-abobora", title = "Fazer Inscrição" })
                                     </li>
                                     <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Visualizar Dados Bancário para Pagamento">
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\dadosbancario.php?event=72650d9cf782fbd6c38ca84c168e9562" data-height="410" data-width="100%" data-target="#modalDadosBancario" title="Informar Pagamento">
@@ -750,6 +744,9 @@
                                         <a class="modalButton" href="#" data-toggle="modal" data-src="Evento\Info\Pagamento\index.php?Op=InformarPagamento&amp;event=72650d9cf782fbd6c38ca84c168e9562" data-height="490" data-width="100%" data-target="#modalPagamento" title="Informar Pagamento">
                                             <i class="fa fa-cloud-upload-alt fa-lg icon-abobora"></i>
                                         </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Checagem">
+                                        @Html.ActionLink(" ", "Checagem", "Evento", new { id = Guid.NewGuid().ToString() }, new { @class = "fa fa-check-square fa-lg icon-abobora", title = "Checagem" })
                                     </li>
                                 </ul>
                             </div><!-- /.widget-user -->
@@ -864,7 +861,7 @@
                             </div>
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title" title="Video: UFC 224 'Embedded' Episode 1">
-                                    Video: UFC 224 'Embedded' Episode 1
+                                    UFC 224 'Embedded' Episode 1
                                 </a>
                                 <span class="product-description" title="No episódio 1 do UFC 224, “Embedded”, as estrelas do card se preparam para se aventurar na cidade-sede do evento, o Rio de Janeiro.">
                                     No episódio 1 do UFC 224, “Embedded”, as estrelas do card se preparam para se aventurar na cidade-sede do evento, o Rio de Janeiro.
@@ -961,34 +958,34 @@
         </div>
         <div class="row text-center">
             <div class="col-sm-4 post">
-                <h2 class="ilutas-red"><i class="fa fa-users"></i></h2>
+                <h2 class="s-red"><i class="fa fa-users"></i></h2>
                 <h1>+<span class="count">2800</span></h1>
                 <h6>
                     <span class="p-apoio">equipes cadastradas</span><!--6-->
                 </h6>
             </div>
             <div class="col-sm-4 post">
-                <h2 class="ilutas-red"><i class="fa fa-eye"></i></h2>
+                <h2 class="s-red"><i class="fa fa-eye"></i></h2>
                 <h1>+<span class="count">35000</span></h1>
                 <h6><span class="p-apoio">acessos mensais</span></h6>
             </div>
             <div class="col-sm-4 post">
-                <h2 class="ilutas-red"><i class="fa fa-pencil"></i></h2>
+                <h2 class="s-red"><i class="fa fa-pencil-alt"></i></h2>
                 <h1>+<span class="count">82000</span></h1>
                 <h6><span class="p-apoio">atletas inscritos</span></h6>
             </div>
             <div class="col-sm-4 post">
-                <h2 class="ilutas-red"><i class="fa fa-map-marker"></i></h2>
+                <h2 class="s-red"><i class="fa fa-map-marker"></i></h2>
                 <h1>+<span class="count">17</span></h1>
                 <h6><span class="p-apoio">estados presentes</span></h6>
             </div>
             <div class="col-sm-4 post">
-                <h2 class="ilutas-red"><i class="fa fa-rocket"></i></h2>
+                <h2 class="s-red"><i class="fa fa-rocket"></i></h2>
                 <h1>+<span class="count">100</span></h1>
                 <h6><span class="p-apoio">organizadores usaram</span></h6>
             </div>
             <div class="col-sm-4 post">
-                <h2 class="ilutas-red"><i class="fa fa-info"></i></h2>
+                <h2 class="s-red"><i class="fa fa-info"></i></h2>
                 <h1>+<span class="count">260</span></h1>
                 <h6><span class="p-apoio">eventos realizados</span></h6>
             </div>

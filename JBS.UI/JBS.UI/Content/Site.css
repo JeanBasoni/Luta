@@ -46,6 +46,10 @@ label {
     background-color:     rgba(32,61,76,.95) !important;
 }
 
+.content-wrapper {
+    background-color: #e6e6e6;
+}
+
 .box-none{
     border-top: none;
 }
@@ -274,7 +278,7 @@ label {
 }
 
     .footer h3 {
-        color: #db333f;
+        color: #f25f43;
     }
 
     .footer ul {
@@ -294,7 +298,7 @@ label {
         }
 
             .footer ul a:hover {
-                color: #db333f;
+                color: #f25f43;
             }
 
 .widget-user-2 .widget-user-username {
@@ -351,9 +355,9 @@ label {
 }
 
     .footer .fa:hover {
-        color: #1a1a1a;
-        background: #dc333f;
-        border: 2px solid #dc333f;
+        color: #f25f43;
+        background: #f25f43;
+        border: 2px solid #f25f43;
     }
 
 .filtro .box {
@@ -366,13 +370,13 @@ label {
 }
 
 .product-title {
-    color: #b30000;
+    color: #e03b1c;
 }
 
 a:hover, a:active, a:focus {
     outline: none;
     text-decoration: none;
-    color: #a54c4c;
+    color: #f25f43;
 }
 
 .footer-2 {
@@ -526,6 +530,13 @@ a:hover, a:active, a:focus {
     width: 100%;
 }
 
+.bcenter {
+    /*display: inline-block;
+    vertical-align: middle;*/
+
+    padding-top:30px;
+}
+
 .header-azul h1 {
     margin-top: 0;
 }
@@ -540,16 +551,20 @@ a:hover, a:active, a:focus {
 .box-gray-2 {
     margin-top: 40px;
     margin-bottom: -20px;
-    background-color: #e6e6e6;
+    background-color: #dcdcdc;
     padding-top: 20px;
     padding-bottom: 50px;
     color: rgba(32,61,76,1);
 }
 
     .box-gray-2 .arrow-up {
-        border-bottom: 20px solid #e6e6e6 !important;
+        border-bottom: 20px solid #dcdcdc !important;
         margin-top: -40px;
     }
+
+.login-box-body {
+    border: 1px solid #c7c7c7;
+}
 
 .arrow-up {
     width: 0;
@@ -557,6 +572,14 @@ a:hover, a:active, a:focus {
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 20px solid #1a1a1a;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #e6e6e6 !important;
 }
 
 .title-v1-vermelho {
@@ -571,13 +594,16 @@ a:hover, a:active, a:focus {
         margin-bottom: 20px;
         padding-bottom: 15px;
         margin-top: 0;
-        color: #dc333f;
+        color: #f25f43;
     }
 
-.ilutas-red, .ilutas-b-login-color {
-    color: #dc333f;
+.s-red, .ilutas-b-login-color {
+    color: #f25f43;
 }
 
+.s-red {
+    color: #f25f43;
+}
 h2, .h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -613,12 +639,31 @@ h1, .h1 {
     content: " ";
     bottom: -7px;
     position: absolute;
-    background: #dc333f;
+    background: #f25f43;
     margin-left: -30px;
+}
+
+.post span {
+    color: rgba(32,61,76,.95);
 }
 
 .tituloSobreP {
     color: #fff;
+    font-size: 14px;
+}
+
+.callout callout-info {
+    background-color: #d6d6d6 !important;
+    color:rgba(32,61,76,.95);
+}
+
+.count {
+    font-size: 44px;
+    /*19px*/
+}
+
+.p-apoio {
+    font-size: 19px;
 }
 
 .nav-stacked > li.active > a, .nav-stacked > li.active > a:active {
@@ -707,6 +752,10 @@ h1, .h1 {
 .no-margin-side {
     margin-left: 0 !important;
     margin-right: 0 !important;
+}
+
+.progress{
+    margin:0;
 }
 
 

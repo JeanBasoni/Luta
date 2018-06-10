@@ -1,0 +1,770 @@
+﻿
+@{
+    ViewBag.Title = "Atleta";
+}
+
+<div class="row bg-dark text-white">
+    <div class="container">
+        <div class="col-md-9">
+            <h3>
+                Atletas
+            </h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-12">
+        <div class="box box-none">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Modalidade</label>
+                            <select class="form-control">
+                                <option value="">selecione</option>
+                                <option>Jiu-Jitsu</option>
+                                <option>Judô</option>
+                                <option>Muay-Thai</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Gênero</label>
+                            <select class="form-control">
+                                <option value="">selecione</option>
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Categoria</label>
+                            <select class="form-control">
+                                <option value="">selecione</option>
+                                <option value="11">Pré-Mirim 1 (4 a 4 anos)</option>
+                                <option value="21">Pré-Mirim 2 (5 a 5 anos)</option>
+                                <option value="22">Pré-Mirim 3 (6 a 6 anos)</option>
+                                <option value="12">Mirim 1 (7 a 7 anos)</option>
+                                <option value="23">Mirim 2 (8 a 8 anos)</option>
+                                <option value="24">Mirim 3 (9 a 9 anos)</option>
+                                <option value="13">Infantil 1 (10 a 10 anos)</option>
+                                <option value="19">Infantil 2 (11 a 11 anos)</option>
+                                <option value="25">Infantil 3 (12 a 12 anos)</option>
+                                <option value="14">Infanto Juvenil 1 (13 a 13 anos)</option>
+                                <option value="20">Infanto Juvenil 2 (14 a 14 anos)</option>
+                                <option value="26">Infanto-Juvenil 3 (15 a 15 anos)</option>
+                                <option value="27">Juvenil (16 a 17 anos)</option>
+                                <option value="16">Adulto (18 a 29 anos)</option>
+                                <option value="17">Master 1 (30 a 35 anos)</option>
+                                <option value="18">Master 2 (36 a 40 anos)</option>
+                                <option value="89">Master 3 (41 a 45 anos)</option>
+                                <option value="90">Master 4 (46 a 50 anos)</option>
+                                <option value="91">Master 5 (51 a 55 anos)</option>
+                                <option value="92">Master 6 (acima de 56 anos)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Graduação</label>
+                            <select class="form-control">
+                                <option value="">selecione</option>
+                                <option value="1">Branca</option>
+                                <option value="2">Cinza</option>
+                                <option value="3">Amarela</option>
+                                <option value="4">Laranja</option>
+                                <option value="5">Verde</option>
+                                <option value="6">Azul</option>
+                                <option value="7">Roxa</option>
+                                <option value="8">Marrom</option>
+                                <option value="9">Preta</option>
+                                <option value="28">Coral</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Peso</label>
+                            <select class="form-control">
+                                <option value="">selecione</option>
+                                <option value="12">Galo (Até  kg)</option>
+                                <option value="13">Pluma (Até  kg)</option>
+                                <option value="14">Pena (Até  kg)</option>
+                                <option value="15">Leve (Até  kg)</option>
+                                <option value="16">Médio (Até  kg)</option>
+                                <option value="17">Meio Pesado (Até  kg)</option>
+                                <option value="18">Pesado (Até  kg)</option>
+                                <option value="19">Super Pesado (Até  kg)</option>
+                                <option value="20">Pesadíssimo (Até  kg)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button style="margin-top:27px;" class="btn btn-primary glyphicon glyphicon-search" title="Filtrar"></button>
+                    </div>
+                </div>
+                <hr style="margin:0; padding-bottom:8px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-responsive table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td style="height:153px; vertical-align:middle;">
+                                        <img src="~/Content/imagem/jonjones.jpg" width="128" />
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label style="margin:0;">Jean Claudio dos Santos Basoni</label>
+                                                <div class="timeline-body" style="font-size:14px;">
+                                                    Descrição breve sobre o atleta. Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi.
+                                                    Copo furadis é disculpa de bebadis, arcu quam euismod magna...
+                                                </div>
+                                            </div>
+                                            <div class="row" style="font-size:15px;">
+                                                <div class="col-md-5">
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 15 Vitória(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 8 Derrota(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 2 Empate(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 25 s/ resultado</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Pesso:</b> 95kg</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Altura:</b> 175cm</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Idade:</b> 24</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Natural:</b> Rio de Janeiro/RJ</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Clube:</b> NocauteCombate</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        @*<a href="#" class="uppercase">ver tudo</a>*@
+                                                        @Html.ActionLink("ver tudo", "DetalheDoAtleta", new { id = Guid.NewGuid() }, new { @class = "uppercase" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:153px; vertical-align:middle;">
+                                        <img src="~/Content/imagem/jonjones.jpg" width="128" />
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label style="margin:0;">Jean Claudio dos Santos Basoni</label>
+                                                <div class="timeline-body" style="font-size:14px;">
+                                                    Descrição breve sobre o atleta. Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi.
+                                                    Copo furadis é disculpa de bebadis, arcu quam euismod magna...
+                                                </div>
+                                            </div>
+                                            <div class="row" style="font-size:15px;">
+                                                <div class="col-md-5">
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 15 Vitória(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 8 Derrota(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 2 Empate(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 25 s/ resultado</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Pesso:</b> 95kg</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Altura:</b> 175cm</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Idade:</b> 24</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Natural:</b> Rio de Janeiro/RJ</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Clube:</b> NocauteCombate</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <a href="#" class="uppercase">ver tudo</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:153px; vertical-align:middle;">
+                                        <img src="~/Content/imagem/jonjones.jpg" width="128" />
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label style="margin:0;">Jean Claudio dos Santos Basoni</label>
+                                                <div class="timeline-body" style="font-size:14px;">
+                                                    Descrição breve sobre o atleta. Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi.
+                                                    Copo furadis é disculpa de bebadis, arcu quam euismod magna...
+                                                </div>
+                                            </div>
+                                            <div class="row" style="font-size:15px;">
+                                                <div class="col-md-5">
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 15 Vitória(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 8 Derrota(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 2 Empate(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 25 s/ resultado</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Pesso:</b> 95kg</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Altura:</b> 175cm</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Idade:</b> 24</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Natural:</b> Rio de Janeiro/RJ</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Clube:</b> NocauteCombate</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <a href="#" class="uppercase">ver tudo</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:153px; vertical-align:middle;">
+                                        <img src="~/Content/imagem/jonjones.jpg" width="128" />
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label style="margin:0;">Jean Claudio dos Santos Basoni</label>
+                                                <div class="timeline-body" style="font-size:14px;">
+                                                    Descrição breve sobre o atleta. Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi.
+                                                    Copo furadis é disculpa de bebadis, arcu quam euismod magna...
+                                                </div>
+                                            </div>
+                                            <div class="row" style="font-size:15px;">
+                                                <div class="col-md-5">
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 15 Vitória(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 8 Derrota(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 2 Empate(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 25 s/ resultado</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Pesso:</b> 95kg</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Altura:</b> 175cm</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Idade:</b> 24</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Natural:</b> Rio de Janeiro/RJ</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Clube:</b> NocauteCombate</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <a href="#" class="uppercase">ver tudo</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:153px; vertical-align:middle;">
+                                        <img src="~/Content/imagem/jonjones.jpg" width="128" />
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label style="margin:0;">Jean Claudio dos Santos Basoni</label>
+                                                <div class="timeline-body" style="font-size:14px;">
+                                                    Descrição breve sobre o atleta. Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi.
+                                                    Copo furadis é disculpa de bebadis, arcu quam euismod magna...
+                                                </div>
+                                            </div>
+                                            <div class="row" style="font-size:15px;">
+                                                <div class="col-md-5">
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 15 Vitória(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 8 Derrota(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 2 Empate(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 25 s/ resultado</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Pesso:</b> 95kg</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Altura:</b> 175cm</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Idade:</b> 24</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Natural:</b> Rio de Janeiro/RJ</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Clube:</b> NocauteCombate</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <a href="#" class="uppercase">ver tudo</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:153px; vertical-align:middle;">
+                                        <img src="~/Content/imagem/jonjones.jpg" width="128" />
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label style="margin:0;">Jean Claudio dos Santos Basoni</label>
+                                                <div class="timeline-body" style="font-size:14px;">
+                                                    Descrição breve sobre o atleta. Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi.
+                                                    Copo furadis é disculpa de bebadis, arcu quam euismod magna...
+                                                </div>
+                                            </div>
+                                            <div class="row" style="font-size:15px;">
+                                                <div class="col-md-5">
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 15 Vitória(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 8 Derrota(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 2 Empate(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 25 s/ resultado</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Pesso:</b> 95kg</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Altura:</b> 175cm</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Idade:</b> 24</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Natural:</b> Rio de Janeiro/RJ</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Clube:</b> NocauteCombate</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <a href="#" class="uppercase">ver tudo</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height:153px; vertical-align:middle;">
+                                        <img src="~/Content/imagem/jonjones.jpg" width="128" />
+                                    </td>
+                                    <td>
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label style="margin:0;">Jean Claudio dos Santos Basoni</label>
+                                                <div class="timeline-body" style="font-size:14px;">
+                                                    Descrição breve sobre o atleta. Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi.
+                                                    Copo furadis é disculpa de bebadis, arcu quam euismod magna...
+                                                </div>
+                                            </div>
+                                            <div class="row" style="font-size:15px;">
+                                                <div class="col-md-5">
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 15 Vitória(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 8%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 8 Derrota(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 2 Empate(s)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-9" style="padding-left:0; padding-right:0;">
+                                                            <div class="progress">
+                                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3" style="padding-left:0; padding-right:0;">
+                                                            <span style="color:rgba(32,61,76,.95) !important">&nbsp; 25 s/ resultado</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Pesso:</b> 95kg</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Altura:</b> 175cm</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Idade:</b> 24</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Natural:</b> Rio de Janeiro/RJ</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p style="margin:0;line-height:25px;"><b>Clube:</b> NocauteCombate</p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <a href="#" class="uppercase">ver tudo</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*Esporte: MMA, Muay thai, k1
+    Sexo: Masculino, Feminino
+    TipoLuta: Amador, profissional
+    CategoriaDePeso----
+
+    Jiu-jitsu
+    Masculino ou feminino
+    GI ou no gi
+    Pesos
+    Graduações*@

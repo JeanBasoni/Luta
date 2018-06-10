@@ -149,6 +149,7 @@
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1035,6 +1036,9 @@
     <Content Include="Content\imagem\db1d4abf09f2318ec50ada42c86d1e17_2.png" />
     <Content Include="Content\imagem\db1d4abf09f2318ec50ada42c86d1e17.png" />
     <Content Include="Content\imagem\double-tail-spin.svg" />
+    <Content Include="Content\imagem\icon_facebook.png" />
+    <Content Include="Content\imagem\icon_twitter.png" />
+    <Content Include="Content\imagem\icon_youtube.png" />
     <Content Include="Content\imagem\img_luta_1.jpg" />
     <Content Include="Content\imagem\img_luta_2.jpg" />
     <Content Include="Content\imagem\img_luta_3.jpg" />
@@ -1049,6 +1053,8 @@
     <Content Include="Content\imagem\img_l_6.jpg" />
     <Content Include="Content\imagem\img_l_7.jpg" />
     <Content Include="Content\imagem\img_l_8.jpg" />
+    <Content Include="Content\imagem\jonjones.jpg" />
+    <Content Include="Content\imagem\logo01.png" />
     <Content Include="Content\imagem\sobre-img-1.jpg" />
     <Content Include="Content\imagem\sobre-img-2.jpg" />
     <Content Include="Content\Site1.css" />
@@ -1273,6 +1279,9 @@
     <Content Include="Views\ErrorPage\Http404.cshtml" />
     <Content Include="Views\ErrorPage\Http500.cshtml" />
     <Content Include="Views\Evento\DetalheDoEvento.cshtml" />
+    <Content Include="Views\Evento\Checagem.cshtml" />
+    <Content Include="Views\Pessoa\Atleta.cshtml" />
+    <Content Include="Views\Pessoa\DetalheDoAtleta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="~/Content/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="~/Content/admin/dist/css/AdminLTE.min.css">
+
+    <link rel="stylesheet" href="~/Content/admin/plugins/iCheck/square/blue.css">
+
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="~/Content/admin/dist/css/skins/_all-skins.min.css">
@@ -54,7 +57,8 @@
                     </button>
                     <a class="navbar-brand" href="http://localhost:50101/">
                         @*<img src="~/Content/imagem/db1d4abf09f2318ec50ada42c86d1e17_2.png" style="max-width:100%; height:auto;" />*@
-                        <img src="http://www.ilutas.com.br/images/logo-ilutas-1.png">
+                        <img src="~/Content/imagem/logo01.png" />
+                        @*<img src="http://www.ilutas.com.br/images/logo-ilutas-1.png">*@
                     </a>
 
                 </div>
@@ -64,7 +68,8 @@
                         <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                         <li>@Html.ActionLink("Eventos", "Evento", "Evento")</li>
                         <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("ADMIN", "Index", "Home", new { area = "Admin" }, null)</li>
+                        <li>@Html.ActionLink("Atleta", "Atleta", "Pessoa")</li>
+                        @*<li>@Html.ActionLink("ADMIN", "Index", "Home", new { area = "Admin" }, null)</li>*@
                         <li class="dropdown">
                             <a href="~/Home/Login" class="login-button" role="button" aria-haspopup="true" aria-expanded="false">
                                 Login
@@ -90,25 +95,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
-                        <h3>Sobre o Site</h3>
-                        <p>O SITE é um Portal de Serviços Online destinados à Organizadores de Eventos de qualquer Esporte de Lutas. Saiba mais nossos serviços.</p>
-                        <p>Estamos situados na Av. Presidente Vargas, nº 123, Centro. Rio de JAneiro/RJ, Brasil.</p>
-                    </div>
-                    <div class="col-sm-2">
                         <h3>Navegação</h3>
                         <ul>
-                            <a href="http://www.ilutas.com.br/sobre/#depoimentos" target="_self"><li>Depoimentos</li></a>
-                            <a href="http://www.ilutas.com.br/Eventos" target="_self"><li>Nossos Eventos: <br> - Campeonatos<br> - Cursos/Palestras <br> - Workshops/Seminários <br> -MMA <br> -Confrontos/Desafios</li></a>
-                            <a href="http://www.ilutas.com.br/Pessoa/Identifique-se.php" target="_self"><li>Cadastre-se</li></a>
+                            <a href="#" target="_self"><li>Home</li></a>
+                            <a href="#" target="_self"><li>Institucional</li></a>
+                            <a href="#" target="_self"><li>Nossos Eventos</a>
+                            <a href="#" target="_self"><li>Seja um membro</a>
                         </ul>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                         <h3>Suporte</h3>
                         <ul>
-                            <a href="http://www.ilutas.com.br/contato" target="_self"><li>Contato</li></a>
-                            <a xhref="http://www.ilutas.com.br/faq" target="_self"><li>Perguntas frequentes (FAQ)</li></a>
-                            <a xhref="http://www.ilutas.com.br/faq" target="_self"><li>2ª Via do Boleto</li></a>
-                            <a xhref="http://www.ilutas.com.br/faq" target="_self"><li>Enviar Comprovante de Pagamento (Depósito e Transferência)</li></a>
+                            <a href="#" target="_self"><li>Contato</li></a>
+                            <a href="#" target="_self"><li>Perguntas frequentes (FAQ)</li></a>
+                            <a href="#" target="_self"><li>2ª Via do Boleto</li></a>
+                            <a href="#" target="_self"><li>Enviar Comprovante de Pagamento</li></a>
                         </ul>
                     </div>
                     <div class="col-sm-3">
@@ -120,12 +121,27 @@
                             <br> Seg à Sex das 09 às 18h (dias úteis)
                         </ul>
                     </div>
-                    <div class="col-sm-2 pull-right text-right">
+                    <div class="col-sm-3 text-left">
                         <h3>Social link</h3>
-                        <a href="https://www.facebook.com/portalilutas/" target="_blank"><i class="fa fa-facebook-square hover-transition"></i></a>
-                        <a href="https://www.instagram.com/i_lutas/" target="_blank"><i class="fa fa-instagram hover-transition"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-google-plus hover-transition"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-twitter fa-dark-green hover-transition"></i></a>
+                        <ul>
+                            <a href="#" target="_blank">
+                                <img src="~/Content/imagem/icon_facebook.png" style="width:32px;" />
+                                Facebook
+                            </a>
+                            <br />
+                            <a href="#" target="_blank">
+
+                                <img src="~/Content/imagem/icon_twitter.png" style="width:32px;" />
+                                @*<i class="fa fa-instagram"></i>*@
+                                Twitter
+                            </a>
+                            <br />
+                            <a href="#" target="_blank">
+                                <img src="~/Content/imagem/icon_youtube.png" style="width:32px;" />
+                                @*<i class="fa fa-twitter-square fa-dark-green"></i>*@
+                                YouTube
+                            </a>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -145,7 +161,7 @@
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)*@
 
-    <script src="~/Content/admin/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="~/Content/admin/bootstrap/js/bootstrap.min.js"></script>
     <!-- FastClick -->
@@ -162,9 +178,11 @@
     <!-- ChartJS 1.0.1 -->
     <script src="~/Content/admin/plugins/chartjs/Chart.min.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="~/Content/admin/dist/js/pages/dashboard2.js"></script>
+    @*<script src="~/Content/admin/dist/js/pages/dashboard2.js"></script>*@
     <!-- AdminLTE for demo purposes -->
     <script src="~/Content/admin/dist/js/demo.js"></script>
+
+    <script src="~/Content/admin/plugins/iCheck/icheck.min.js"></script>
 
 </body>
 </html>

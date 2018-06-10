@@ -16,9 +16,19 @@ namespace JBS.UI.Controllers
             return View();
         }
 
-        public ActionResult DetalheDoEvento(Guid Id)
+        public ActionResult DetalheDoEvento(Guid id)
         {
             return View();
         }
+
+        public ActionResult Checagem(Guid id)
+        {
+            var nomeEvento = "";
+
+            ViewBag.Titulo = "Checagem " + nomeEvento; 
+            return View();
+        }
+
+        
     }
 }

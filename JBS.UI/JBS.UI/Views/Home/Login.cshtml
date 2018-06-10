@@ -4,8 +4,8 @@
 }
 
 <div class="login-box" style="padding-top: 20px;">
-    <div class="login-logo">
-        <a href="../../index2.html"><b>Nocaute</b>Combate</a>
+    <div class="login-logo" style="color:#444;">
+        <b>Nocaute</b>Combate
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
@@ -22,12 +22,14 @@
             </div>
             <div class="row">
                 <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label class="">
-                            <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
-                            <input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> Me lembrar
-                        </label>
-                    </div>
+                    @*<div class="checkbox icheck">
+            <label class="">
+                <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
+                <input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> Me lembrar
+            </label>
+        </div>*@
+                    <a href="#">Esqueci minha senha</a><br>
+                    @Html.ActionLink("Criar minha conta", "NovoUsuario", null, new { @class = "text-center" })
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
@@ -37,8 +39,7 @@
             </div>
         </form>
 
-        <a href="#">Esqueci minha senha</a><br>
-        @Html.ActionLink("Criar minha conta", "NovoUsuario", null, new { @class="text-center" })
+        
     </div>
     <!-- /.login-box-body -->
 </div>
